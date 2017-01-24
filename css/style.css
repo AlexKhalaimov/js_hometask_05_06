@@ -1,0 +1,31 @@
+body{
+    font-size: 1.3rem;
+    font-family: Arial, Tahoma, sans-serif;
+}
+.wrapper{
+    margin: 30px auto;
+    max-width: 30%;
+    background-color: gray;
+    padding: 20px 0 50px 20px;
+}
+#start, #pause, #split, #reset{
+    border: 2px solid black;
+    background-color: cfe2f3;
+    margin: 29px ;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+
+}
+#pause{
+    display: none;
+}
+span{
+    background-color: blue;
+
+}
+p{
+    margin: auto;
+    width: 30%;
+}
