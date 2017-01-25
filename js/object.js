@@ -1,55 +1,5 @@
-// function createHTML(){
-//
-//     var div = 'div';
-//     var p = 'p';
-//     var span = 'span';
-//     var buttonStart;
-//     var buttonPause;
-//     var buttonSplit;
-//     var buttonReset;
-//     var tag;
-//     var parent;
-//     var body = document.body;
-//     var buttons = {
-//         text1 : 'start',
-//         text2 : 'pause',
-//         text3 : 'split',
-//         text4 : 'reset',
-//         createButtons : function (element, text){
-//             element = document.createElement('button');
-//             element.type = 'button';
-//             element.setAttribute('id', text);
-//             element.appendChild(document.createTextNode(text));
-//             return element;
-//
-//         }
-//     };
-//
-//
-//
-// }
-// createHTML();
-// var div = 'div';
-//     var p = 'p';
-//     var span = 'span';
-//     var buttonStart;
-//     var buttonPause;
-//     var buttonSplit;
-//     var buttonReset;
-//     var tag;
-//     var parent;
-//     var body = document.body;
-// function createTags(tag, parent){
-//
-//     element = document.createElement(tag);
-//     parent.appendChild(element);
-// }
-// createTags(p, div);
-// createTags(span, p);
-// createTags(div, body);
 var parent = document.body;
 var div = document.div;
-
 
 function  createWrapper(tag){
     div = document.createElement(tag);
