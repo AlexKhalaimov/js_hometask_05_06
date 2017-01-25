@@ -16,20 +16,22 @@ function myNewTimer(){
     var pause = document.getElementById('pause');
     var reset = document.getElementById('reset');
     var split = document.getElementById('split');
-    var splitClick = document.getElementById('split');
     var initialDate = new Date().getTime();
-    var start = document.getElementById('start');
-    start.addEventListener('click', startTimer());
+    var start = document.getElementById("start");
+
+    start.addEventListener("click", startTimer());
+
      function startTimer (){
 
          initialDate = new Date().getTime();
          timeCount();
          timer = setInterval(timeCount, 15);
-         document.getElementById('start').style.display = 'none';
+         document.getElementById("start").style.display = 'none';
          document.getElementById('pause').style.display = 'inline-block';
          pause.addEventListener('click', clickCounter);
          reset.addEventListener('click', resetTimer);
          split.addEventListener('click', splitTimer);
+
 
      }
 
@@ -40,6 +42,7 @@ function myNewTimer(){
 
              document.getElementById('pause').innerHTML = 'Continue';
              startTimer();
+             document.getElementById('pause').innerHTML = 'Pause';
          }
 
          else {
@@ -47,7 +50,9 @@ function myNewTimer(){
              document.getElementById('pause').innerHTML = 'Pause';
              clearInterval(timer);
              timeCount();
+             document.getElementById('pause').innerHTML = 'Continue';
         }
+
          return counter;
      }
 
@@ -76,21 +81,18 @@ function myNewTimer(){
               hours = '0' + hours;
           }
           temp = hours + ':' + minutes + ':' + seconds + ':' + milliseconds;
-          if (temp != document.getElementById('timeCount').innerHTML) {
-              document.getElementById('timeCount').innerHTML = temp;
+          if (temp != document.getElementById("timeCount").innerHTML) {
+              document.getElementById("timeCount").innerHTML = temp;
           }
      }
 
      function splitTimer() {
 
-         var splitList = document.getElementById('split_list');
+         var splitList = document.getElementById("split_list");
          var splitListItem = document.createElement('li');
          splitCounter++;
-         timeCount();
-         splitClick.addEventListener('click', splitTimer );
          splitListItem.appendChild(document.createTextNode('split' + splitCounter + ' ' + temp));
          splitList.appendChild(splitListItem);
-         clearInterval(timer);
          return splitCounter;
      }
 
@@ -103,11 +105,12 @@ function myNewTimer(){
          splitCounter = 0;
          time = 0;
          delta = 0;
+
          document.getElementById('timeCount').innerHTML = temp;
          document.getElementById('start').innerHTML = 'Start';
          document.getElementById('pause').style.display = 'none';
          document.getElementById('start').style.display = 'inline-block';
-         document.getElementById('split_list').innerHTML = '';
+         document.getElementById("split_list").innerHTML = ' ';
      }
 }
 // =======================================================================================
